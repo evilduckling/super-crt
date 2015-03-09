@@ -1,0 +1,8 @@
+Options +FollowSymlinks
+
+RewriteEngine On
+
+RewriteRule ^media/(.*)$ /application/media/$1 [E=BREAK:1,L]
+
+RewriteCond %{ENV:REDIRECT_BREAK} !^1$
+RewriteRule (.*) core/bootstrap.php [L]
