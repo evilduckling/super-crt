@@ -11,7 +11,7 @@ function __autoload($class) {
 
 }
 
-abstract class Object {
+abstract class CrtObject {
 
 	protected $data = array();
 	
@@ -34,7 +34,7 @@ abstract class Object {
 /**
  * Controller
  */
-abstract class Controller extends Object {
+abstract class Controller extends CrtObject {
 	
 	public $forward = NULL;
 
@@ -49,7 +49,7 @@ abstract class Controller extends Object {
 /**
  * View
  */
-abstract class View extends Object {
+abstract class View extends CrtObject {
 
 	public function setData($data = array()) {
 		return $this->data = $data;
@@ -76,7 +76,7 @@ class AjaxView extends View {
 /**
  * Model
  */
-abstract class Bean extends Object {
+abstract class Bean extends CrtObject {
 
 	protected $database = NULL;
 
