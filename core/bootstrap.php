@@ -11,7 +11,7 @@ ignore_user_abort(TRUE);
 mb_internal_encoding('UTF-8');
 
 define("CRT_CORE_DIRECTORY", dirname(__FILE__));
-define("CRT_ROOT_DIRECTORY", realpath(CRT_CORE_DIRECTORY.'/..');
+define("CRT_ROOT_DIRECTORY", realpath(CRT_CORE_DIRECTORY.'/..'));
 define("CRT_APPLICATION_DIRECTORY", CRT_ROOT_DIRECTORY.'/application');
 define("CRT_CONF_DIRECTORY", CRT_ROOT_DIRECTORY.'/conf');
 define("CRT_LIB_DIRECTORY", CRT_ROOT_DIRECTORY.'/lib');
